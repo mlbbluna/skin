@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: url("mlbb.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    .giveaway-button {
+      text-decoration: none;
+      font-size: 1.5rem;
+      padding: 15px 40px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(45deg, #ff4d4d, #ff9933);
+      color: white;
+      font-weight: bold;
+      box-shadow: 0 0 20px rgba(255, 77, 77, 0.6);
+      transition: all 0.3s ease;
+    }
+
+    .giveaway-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px rgba(255, 153, 51, 0.8);
+      background: linear-gradient(45deg, #ff9933, #ff4d4d);
+    }

